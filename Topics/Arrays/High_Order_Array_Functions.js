@@ -35,6 +35,7 @@ const persons = [
 // 4. some()
 // 5. every()
 // 6. reduce()
+// 7. foreach()
 
 // MAP, FILTER take in ONE PARAMETER (a lambda function)
 
@@ -74,3 +75,13 @@ const foundPerson = persons.find(
 )
 
 console.log(foundPerson)
+
+// FOREACH() function
+// The for each does not return anything but rather it iterates over the elements in the array
+// Can be used to in place of a FOR loop
+persons.forEach(
+    person => {
+        console.log(`${person.name} is ${person.age} years old`);
+        // This acts as a replacement for the for loop
+    }
+)
