@@ -22,7 +22,7 @@
 
 body {
     position: relative;
-    min-height: 100vh;
+    min-height: 90vh;
     background: var(--background-color);
     color: var(--text-color);
     display: flex;
@@ -60,7 +60,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    box-shadow: .5rem .5rem 5rem 50px var(--shadow-color);
+    box-shadow: .5rem .5rem 5rem 30px var(--shadow-color);
 }
 
 #javascript .bx {
