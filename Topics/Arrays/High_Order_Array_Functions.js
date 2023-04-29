@@ -48,7 +48,7 @@ const filteredPersons = persons.filter(
         // This will filter out people whose age is > 25
         // The remaining people are added to the filtered list because the return statement returns TRUE
     }
-)
+);
 
 console.log(filteredPersons);
 
@@ -60,7 +60,7 @@ const olderPeople = persons.map(
         return `${person.name} is now ${person.age += 1} years old`;
         // This will add '1' to each person's age to make them '1' year older
     }
-)
+);
 
 console.log(olderPeople);
 
@@ -72,7 +72,7 @@ const foundPerson = persons.find(
         return person.name === 'Daniel';
         // This will return the first 'Daniel' element in the array (with age 19 instead of 22)
     }
-)
+);
 
 console.log(foundPerson)
 
@@ -84,4 +84,24 @@ persons.forEach(
         console.log(`${person.name} is ${person.age} years old`);
         // This acts as a replacement for the for loop
     }
-)
+);
+
+// SOME() function
+// The some function is used to check if the array it is called upon contains ANY element that matches the criteria
+// It doesn't return a new array but rather returns TRUE/FALSE
+const isYouth = persons.some(
+    person => {
+        return person.age > 18
+        // Returns TRUE if one person is older than 18 years old hence is a YOUTH
+        // As soon as one element matches the criteria, then it returns TRUE/FALSE on the whole array
+    }
+);
+
+// EVERY() function
+// Similar to the some() function, this returns TRUE/FALSE if the array it is called upon contains ALL elements that match the criteria
+const isOld = persons.every(
+    person => {
+        return person.age > 60
+        // This will return FALSE because in the array, there is not element(person) that is older than 60 years
+    }
+);
