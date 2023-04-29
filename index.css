@@ -99,3 +99,46 @@ body {
     letter-spacing: 0;
     color: var(--main-color);
 }
+
+/* Media Queries */
+@media all and (max-width: 600px){
+
+    #javascript{
+        padding: 3rem;
+        height: 350px;
+    }
+    
+    #javascript .bx{
+        font-size: 8rem;
+    }
+
+    .content{
+        font-size: 1.5rem;
+    }
+
+}
+
+@media all and (max-width: 418px){
+
+    .theme .bx{
+        font-size: 1.5rem;
+    }
+
+    #javascript{
+        padding: 2rem;
+        height: 330px;
+    }
+    
+    #javascript .bx{
+        font-size: 7rem;
+    }
+
+    .content{
+        font-size: 1.5rem;
+    }
+
+    .content p{
+        font-size: .7rem;
+    }
+
+}
