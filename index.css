@@ -28,6 +28,7 @@
 }
 
 body {
+    position: relative;
     min-height: 90vh;
     background: var(--background-color);
     color: var(--text-color);
@@ -35,6 +36,23 @@ body {
     align-items: center;
     justify-content: center;
     font-family: 'Poppins', sans-serif;
+}
+
+.theme{
+    position: fixed;
+    top: 2rem;
+    right: 3rem;
+}
+
+.theme .bx{
+    cursor: pointer;
+    font-size: 2rem;
+    color: var(--main-color);
+}
+
+.theme .bx:hover{
+    transform: scale(1.1);
+    transition: all .5s ease-in-out;
 }
 
 #javascript {
@@ -50,9 +68,22 @@ body {
     flex-direction: column;
 }
 
-#javascript i {
+#javascript .bx {
+    cursor: pointer;
     font-size: 10rem;
+    margin: 1rem;
     color: var(--main-color);
+    --fa-beat-fade-opacity: 0.5;
+    --fa-beat-fade-scale: 1.05;
+    --fa-animation-duration: 2s;
+}
+
+#javascript .bx:hover {
+    transform: scale(1.05);
+    --fa-beat-fade-opacity: 1;
+    --fa-beat-fade-scale: 1;
+    --fa-animation-duration: 0;
+    transition: all .3s ease-in-out;
 }
 
 .content {
