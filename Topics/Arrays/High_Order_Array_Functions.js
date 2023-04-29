@@ -36,6 +36,7 @@ const persons = [
 // 5. every()
 // 6. reduce()
 // 7. foreach()
+// 8. includes()
 
 // MAP, FILTER take in ONE PARAMETER (a lambda function)
 
@@ -116,13 +117,24 @@ console.log(isOld);
 const totalAge = persons.reduce(
     // It takes 2 parameters
     // 1. A combination of:
-        // a. The variable name of the variable that will hold the aggregate value
-        // b. The variable name of each element in the array.
+    // a. The variable name of the variable that will hold the aggregate value
+    // b. The variable name of each element in the array.
     // 2. The starting value/point
-    (totalAge, {name, age}) => {
+    (totalAge, { name, age }) => {
         return totalAge + age;
-    }, 
+    },
     0 // This is the starting point. The sum total will start from 0
 )
 
 console.log(totalAge);
+
+// INCLUDES() function
+// The includes function takes a single item and checks where the item passed into the function is contained in the array
+// It returns a boolean value of TRUE/FALSE if the item is contained in the array
+let numbers = [
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14
+];
+
+const isInArray = numbers.includes(20);
+
+console.log(isInArray); // Will return false because 20 is not in the array
