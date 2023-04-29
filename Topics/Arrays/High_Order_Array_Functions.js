@@ -19,6 +19,10 @@ const persons = [
     {
         name: 'Bob',
         age: 34
+    },
+    {
+        name: 'Daniel',
+        age: 22
     }
 ];
 
@@ -26,7 +30,7 @@ const persons = [
 
 // Some of the high order array functions in Javascript are:
 // 1. map()
-// 2. 
+// 2. find()
 // 3. filter()
 // 4. some()
 // 5. every()
@@ -49,6 +53,7 @@ console.log(filteredPersons);
 
 // MAP() function
 // The map() function is used to make changes to all the elements in the array and store them in a new array
+// It can also be used to replace a normal FOR LOOP in order to find properties/attributes of each element in the array
 const olderPeople = persons.map(
     person => {
         return `${person.name} is now ${person.age += 1} years old`;
@@ -57,3 +62,15 @@ const olderPeople = persons.map(
 )
 
 console.log(olderPeople);
+
+// FIND() function
+// This is used to find a single element in thw array
+// It returns the FIRST element in the array that matches the criteria paased into the function
+const foundPerson = persons.find(
+    person => {
+        return person.name === 'Daniel';
+        // This will return the first 'Daniel' element in the array (with age 19 instead of 22)
+    }
+)
+
+console.log(foundPerson)
