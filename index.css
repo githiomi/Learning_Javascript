@@ -120,6 +120,11 @@ body {
 
 @media all and (max-width: 418px){
 
+    .theme{
+        top: 1rem;
+        right: 1.5rem;
+    }
+
     .theme .bx{
         font-size: 1.5rem;
     }
