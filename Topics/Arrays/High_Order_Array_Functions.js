@@ -97,6 +97,8 @@ const isYouth = persons.some(
     }
 );
 
+console.log(isYouth);
+
 // EVERY() function
 // Similar to the some() function, this returns TRUE/FALSE if the array it is called upon contains ALL elements that match the criteria
 const isOld = persons.every(
@@ -105,3 +107,22 @@ const isOld = persons.every(
         // This will return FALSE because in the array, there is not element(person) that is older than 60 years
     }
 );
+
+console.log(isOld);
+
+// REDUCE() function
+// The reduce function is used to aggregate a SINGLE value from all the elements in the array
+// It performs operations on each element of the array and returns a single resultant value
+const totalAge = persons.reduce(
+    // It takes 2 parameters
+    // 1. A combination of:
+        // a. The variable name of the variable that will hold the aggregate value
+        // b. The variable name of each element in the array.
+    // 2. The starting value/point
+    (totalAge, {name, age}) => {
+        return totalAge + age;
+    }, 
+    0 // This is the starting point. The sum total will start from 0
+)
+
+console.log(totalAge);
