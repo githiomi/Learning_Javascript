@@ -6,30 +6,23 @@
 
 /* CSS Variables */
 :root {
-
-    --background-color: #fdfdfd;
     --main-color: #f18f01;
+    --background-color: #fdfdfd;
     --text-color: white;
-    --hover-text-color: white;
-    --dull-text-color: #555;
     --contrast-bg: #222;
-    --shadow-color: rgba(241, 143, 1, 0.5);
-    --transparent: transparent;
-    --background-gradient: linear-gradient(rgb(0, 0, 0, .1), var(--main-color));
+    --shadow-color: black;
 }
 
 .dark_mode {
     --background-color: #1E1E1E;
     --text-color: black;
     --contrast-bg: white;
-    --dull-text-color: #999;
     --shadow-color: rgba(241, 143, 1, 0.6);
-    --hover-text-color: black;
 }
 
 body {
     position: relative;
-    min-height: 90vh;
+    min-height: 100vh;
     background: var(--background-color);
     color: var(--text-color);
     display: flex;
@@ -62,10 +55,12 @@ body {
     background-color: var(--contrast-bg);
     padding: 5rem;
     border-radius: 50%;
+    border: 1px solid var(--text-color);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    box-shadow: .5rem .5rem 5rem 50px var(--shadow-color);
 }
 
 #javascript .bx {
