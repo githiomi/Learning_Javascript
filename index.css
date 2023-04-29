@@ -1,0 +1,71 @@
+/* Charset */
+@charset 'UTF-8';
+
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&family=Poppins:wght@400;700&display=swap');
+
+/* CSS Variables */
+:root {
+
+    --background-color: #fdfdfd;
+    --main-color: #f18f01;
+    --text-color: white;
+    --hover-text-color: white;
+    --dull-text-color: #555;
+    --contrast-bg: #222;
+    --shadow-color: rgba(241, 143, 1, 0.5);
+    --transparent: transparent;
+    --background-gradient: linear-gradient(rgb(0, 0, 0, .1), var(--main-color));
+}
+
+.dark_mode {
+    --background-color: #1E1E1E;
+    --text-color: black;
+    --contrast-bg: white;
+    --dull-text-color: #999;
+    --shadow-color: rgba(241, 143, 1, 0.6);
+    --hover-text-color: black;
+}
+
+body {
+    min-height: 90vh;
+    background: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+#javascript {
+    height: 400px;
+    width: 400px;
+    text-align: center;
+    background-color: var(--contrast-bg);
+    padding: 5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#javascript i {
+    font-size: 10rem;
+    color: var(--main-color);
+}
+
+.content {
+    color: var(--text-color);
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+}
+
+.content p{
+    font-size: .8rem;
+    letter-spacing: 0;
+    color: var(--main-color);
+    font-style: italic;
+}
