@@ -16,8 +16,9 @@ This projects has been tested and run with no problems to report.
 
 You will need to have the following installed on your system:
 
-* `Javascript` installed on your system. ES5 or above >
-* `Javascript` IDE. Either Visual Studio Code
+* `Node JS` installed on your system for the runtime environment.
+* `JavaScript` installed on your system. ES5 or higher installed.
+* `IDE` such as Visual Studio Code.
 
 ## Setup Instructions
 
@@ -29,8 +30,16 @@ You will need to have the following installed on your system:
 npm install <package-name>
 ```
 
-* Open the `Javascript` file with the name you wish you learn.
+* Open the `index.html` file in your browser.
 * Learn and refresh your memory
+
+__OR__
+
+* Run each file using nodejs runtime environment
+
+``` (nodejs)
+node <javascript-file-name>.js
+```
 
 ## Support and contact details
 
