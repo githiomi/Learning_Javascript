@@ -129,6 +129,7 @@ const totalAge = persons.reduce(
 console.log(totalAge);
 
 // INCLUDES() function
+// It is used for simple find() function on simple array objects
 // The includes function takes a single item and checks where the item passed into the function is contained in the array
 // It returns a boolean value of TRUE/FALSE if the item is contained in the array
 let numbers = [
