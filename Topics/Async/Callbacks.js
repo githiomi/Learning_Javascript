@@ -18,9 +18,6 @@ const posts = [
     }
 ];
 
-// DOM manipulation
-let output = document.getElementById('output');
-
 // To mimick a simple DB call delay, we can use a timeout
 function getPosts() {
     setTimeout(() => {
@@ -31,9 +28,7 @@ function getPosts() {
         posts.forEach(
             post => {
                 // Add it to the output 
-                outputPosts += `<li>${post.title} -> ${post.content}</li>`
-                output.innerHTML = outputPosts;
-                output.style.color = 'black';
+                console.log(post)
             }
         )
 
@@ -83,3 +78,5 @@ callbackCreatePost(
     {  title: 'Post Five', content: 'This is post five'},
     getPosts // The function that will be the callback function. passed with no brackets
 )
+
+console.log(posts)
