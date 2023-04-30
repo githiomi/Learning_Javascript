@@ -6,18 +6,18 @@ const baseUrl = "https://jsonplaceholder.typicode.com/users";
 // API - Application Programming Interface
 // This is a file to show the mulitple ways that JS can be used to make API calls
 // All API calls return promises which can then be accessed using the following methods:    
-    // 1. Promises
-    // 2. Async await
+// 1. Promises
+// 2. Async await
 
 // The different ways of making API calls are:
 // 1. 
 // 2. Fetch API
 // 3. Axios
-    // Requires a third party library
-    // 
+// Requires a third party library
+// 
 // 4. JQuery Ajax
-    // Requires a third party library
-    // 
+// Requires a third party library
+// 
 
 
 // URLS
@@ -54,14 +54,14 @@ xmlRequest.send();
 xmlRequest.onload = () => {
 
     // Check if the request was successful
-    if (xmlRequest.status === 200){
+    if (xmlRequest.status === 200) {
         console.log(xmlRequest.response);
 
         // The data returned is always in text format.
         // To convert it to JSON
         jsonResponse = JSON.parse(xmlRequest.response);
         console.log(jsonResponse);
-    }else {
+    } else {
         // If the request was unsuccessful
         console.log("Error: " + xmlRequest.status)
     }
@@ -72,15 +72,15 @@ xmlRequest.onload = () => {
 // Fetch is inbuilt into the Window.document therefore needs no external 3rd party library
 // Fetch returns a promise thus can be used using PROMISES or ASYNC-AWAIT
 // Syntax
-    // fetch (url)
+// fetch (url)
 fetch(baseUrl)
-    .then( response => {
+    .then(response => {
         // The first then() returns an object response that is not usefull
         console.log(response);
         // To get useful information, we then need to convert the response into JSON data
         response.json(); // This returns another promise that is caught in the second .THEN()
     })
-    .then( data => {
+    .then(data => {
         // The second .then() can then return ACTUAL DATA that can then be used to build the code base
         console.log(data);
     });
@@ -117,3 +117,37 @@ getUsers()
 
 // AXIOS
 // This is a third-party library used to make API calls
+// Axios also uses the PROMISES methodoloy to make API calls
+axios.get(baseUrl)
+    .then(
+        (response) => {
+            // NB: Unlike fetch(), Axios DIRECTLY gives JSON output that can be used
+            console.log("Axios response: " + response.data);
+        },
+        (err) => {
+            // Will be executed when there is an error in making the API call
+            console.log(err);
+        }
+)
+
+
+// JQUERY - AJAX
+// A third party library used to make API calls that must first be added to the document
+// It must first be used within the JQUERY scope
+$(document).ready(function() {
+
+    // The JQUERY scope that is performed when the HTML page is fully loaded and rendered
+    $.ajax({
+        // It takes 2 parameters
+        url: baseUrl, // The URL to make the API call to
+        type: 'GET', // The type of request being made to the API
+        success: function(response){
+            // If the API call is successful
+            console.log("AJAX response: " + response);
+        },
+        error: function(errorMessage){
+            // If the call failed
+            console.log(errorMessage);
+        }
+    })
+});
